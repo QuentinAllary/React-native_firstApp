@@ -1,4 +1,4 @@
-#Thu Oct 24 18:33:47 CEST 2019
+#Thu Oct 24 19:33:07 CEST 2019
 base.0=/Users/pivil/WEB_react/WEB_p2papp_2019/android/app/build/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
 path.0=classes.dex
