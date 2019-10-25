@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Oct 24 19:33:09 CEST 2019
+#Fri Oct 25 14:42:43 CEST 2019
 64.base=/Users/pivil/WEB_react/WEB_p2papp_2019/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 64.baseType=DIRECTORY
 33.base=/Users/pivil/WEB_react/WEB_p2papp_2019/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
@@ -44,7 +44,7 @@
 20.path=lib/armeabi-v7a/libjscexecutor.so
 10.set=NATIVE_RESOURCE
 31.base=/Users/pivil/WEB_react/WEB_p2papp_2019/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
-26.path=lib/arm64-v8a/libfolly_json.so
+26.path=lib/x86/libjingle_peerconnection_so.so
 44.baseType=DIRECTORY
 8.path=lib/armeabi-v7a/libnative-filters.so
 62.base=/Users/pivil/WEB_react/WEB_p2papp_2019/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
@@ -212,7 +212,7 @@ count=65
 22.set=NATIVE_RESOURCE
 5.baseType=DIRECTORY
 16.baseType=DIRECTORY
-27.path=lib/x86/libjingle_peerconnection_so.so
+27.path=lib/arm64-v8a/libfolly_json.so
 10.baseType=DIRECTORY
 13.path=lib/x86_64/libfolly_json.so
 50.set=NATIVE_RESOURCE

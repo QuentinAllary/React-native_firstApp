@@ -25,6 +25,7 @@ import {
 } from "react-native/Libraries/NewAppScreen";
 
 import Chat from "./components/chat"
+
 const App: () => React$Node = () => {
   
   return (
