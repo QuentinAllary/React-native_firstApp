@@ -17,7 +17,7 @@ import Video from "./components/video"
 const App: () => React$Node = () => {
   return (
     <MessageV2 />
-    // <>
+    // <> coucou
     //   <StatusBar barStyle="dark-content" />
     //   <SafeAreaView>
     //     <ScrollView
