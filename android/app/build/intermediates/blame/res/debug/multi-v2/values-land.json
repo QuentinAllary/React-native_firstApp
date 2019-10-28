@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/pivil/WEB_react/WEB_p2papp_2019/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/home/snackys/workspace/epitech/WEB_p2papp_2019/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/pivil/.gradle/caches/transforms-2/files-2.1/6ba42dc45a018b330712f1ac570137ff/res/values-land/values-land.xml",
+                    "source": "/home/snackys/.gradle/caches/transforms-2/files-2.1/dc6cdfa8327a29ede463c2540e4dc19d/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

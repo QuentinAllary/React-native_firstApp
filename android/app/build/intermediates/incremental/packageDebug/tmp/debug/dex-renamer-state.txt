@@ -1,4 +1,4 @@
-#Fri Oct 25 14:42:43 CEST 2019
-base.0=/Users/pivil/WEB_react/WEB_p2papp_2019/android/app/build/intermediates/transforms/dexMerger/debug/0
-renamed.0=classes.dex
+#Mon Oct 28 16:47:03 CET 2019
+base.0=/home/snackys/workspace/epitech/WEB_p2papp_2019/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
+renamed.0=classes.dex

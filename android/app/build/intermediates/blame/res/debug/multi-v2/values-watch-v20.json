@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/pivil/WEB_react/WEB_p2papp_2019/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "/home/snackys/workspace/epitech/WEB_p2papp_2019/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/Users/pivil/.gradle/caches/transforms-2/files-2.1/6ba42dc45a018b330712f1ac570137ff/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "/home/snackys/.gradle/caches/transforms-2/files-2.1/dc6cdfa8327a29ede463c2540e4dc19d/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",
