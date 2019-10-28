@@ -11,10 +11,11 @@ import { StyleSheet } from "react-native";
 
 import { Colors } from "react-native/Libraries/NewAppScreen";
 
+import Message from "./components/message"
 import Video from "./components/video"
 const App: () => React$Node = () => {
   return (
-    <Video />
+    <Message />
     // <>
     //   <StatusBar barStyle="dark-content" />
     //   <SafeAreaView>
