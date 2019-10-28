@@ -16,20 +16,27 @@ let configuration = null;
 let offer = null;
 let sendChannel = null;
 
-function initPeers() {
+function createOffer() {
   configuration = {
     iceServers: [{ url: "stun:stun.l.google.com:19302" }]
   };
 
-  // LocalConnection ajroajzajeaozje
+  // LocalConnection
   pc = new RTCPeerConnection(configuration);
   pc.createOffer().then(desc => {
-    pc.setLocalDescription(desc).then(() => {
-      // Send pc.localDescription to peer
-    });
+    pc.setLocalDescription(desc);
+    console.log("Offer", desc);
   });
 }
 
+function createAnswer(sdp){
+  pc.createAnswer(sdp).then(desc => {
+    pc.setRemoteDescription(desc);
+    console.log("Pc remote answer", desc);
+
+  })
+
+}
 
 export default class Message extends React.Component {
   sendMessage() {
@@ -40,11 +47,11 @@ export default class Message extends React.Component {
   render() {
     return (
       <View>
-        <Button title="Connect Button" onPress={() => initPeers()}></Button>
-        <Button title="Disconnect Button"></Button>
+        <Button title="Offer Button" onPress={() => createOffer()}></Button>
+        <Button title="Answer Button" onPress={() => createAnswer(this.state.sdp)}></Button>
         <TextInput
           title="Enter your message"
-          onChangeText={text => this.setState({ message: text })}
+          onChangeText={text => this.setState({sdp: text})}
         ></TextInput>
         <Button title="Send" onPress={() => this.sendMessage()}></Button>
       </View>
