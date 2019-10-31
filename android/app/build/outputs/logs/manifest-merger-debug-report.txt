@@ -5,6 +5,7 @@ INJECTED from /Users/pivil/WEB_react/WEB_p2papp_2019/android/app/src/main/Androi
 INJECTED from /Users/pivil/WEB_react/WEB_p2papp_2019/android/app/src/main/AndroidManifest.xml:1:1-24:12
 INJECTED from /Users/pivil/WEB_react/WEB_p2papp_2019/android/app/src/main/AndroidManifest.xml:1:1-24:12
 MERGED from /Users/pivil/WEB_react/WEB_p2papp_2019/android/app/src/main/AndroidManifest.xml:1:1-24:12
+MERGED from [:react-native-svg] /Users/pivil/WEB_react/WEB_p2papp_2019/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-webrtc] /Users/pivil/WEB_react/WEB_p2papp_2019/node_modules/react-native-webrtc/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.61.2] /Users/pivil/.gradle/caches/transforms-2/files-2.1/51ba9f1a75f33e8ae873b2516e346831/AndroidManifest.xml:2:1-13:12
 MERGED from [org.webkit:android-jsc:r245459] /Users/pivil/.gradle/caches/transforms-2/files-2.1/6de6e6ff223d03c7661054e7ba47cbdd/AndroidManifest.xml:2:1-11:12
@@ -165,6 +166,8 @@ uses-sdk
 INJECTED from /Users/pivil/WEB_react/WEB_p2papp_2019/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/pivil/WEB_react/WEB_p2papp_2019/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/pivil/WEB_react/WEB_p2papp_2019/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-svg] /Users/pivil/WEB_react/WEB_p2papp_2019/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/pivil/WEB_react/WEB_p2papp_2019/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-webrtc] /Users/pivil/WEB_react/WEB_p2papp_2019/node_modules/react-native-webrtc/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-webrtc] /Users/pivil/WEB_react/WEB_p2papp_2019/node_modules/react-native-webrtc/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.61.2] /Users/pivil/.gradle/caches/transforms-2/files-2.1/51ba9f1a75f33e8ae873b2516e346831/AndroidManifest.xml:7:5-9:41
