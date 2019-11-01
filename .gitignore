@@ -4,7 +4,7 @@ npm-debug.log
 
 # Android
 .idea
-.gradle
+android/.gradle
 local.properties
 
 # OSX
