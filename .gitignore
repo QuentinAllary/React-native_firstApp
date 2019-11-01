@@ -1,7 +1,11 @@
-# Node modules
+# node.js
 node_modules/
-yarn.lock
-package-lock.json
+npm-debug.log
 
-#local files
+# Android
+.idea
+.gradle
 local.properties
+
+# OSX
+.DS_Store
