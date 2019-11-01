@@ -7,18 +7,35 @@ export default class Chat extends React.Component {
     this.state = {
       message: null,
       chat: "",
-      name: null
+      name: null,
+      ws: null
+    };
+    ws = new WebSocket("ws://192.168.1.10:8080");
+    ws.onopen = () => {
+      console.log("connection opened");
+    };
+
+    ws.onmessage = e => {
+      console.log("Received from server: ", e.data);
+      
+      let new_chat = this.state.chat + "\n" + e.data
+      this.setState({chat: new_chat});
+    };
+
+    ws.onerror = e => {
+      // an error occurred
+      console.log(e.message);
+    };
+
+    ws.onclose = e => {
+      // connection closed
+      console.log(e.code, e.reason);
     };
   }
 
-  getMessage() {}
-
   postMessage() {
-    let message = this.state.message;
-
-    if (message != null) {
-      let chat = this.state.chat + "\n " + message;
-      this.setState({ chat: chat });
+    if (this.state.message != null) {
+      ws.send(this.state.message); // send a message
       this.setState({ message: null });
     }
   }
@@ -54,7 +71,6 @@ export default class Chat extends React.Component {
 const styles = StyleSheet.create({
   chatBox: {
     flex: 4,
-    backgroundColor: "green"
   },
   message: {
     borderColor: "black",
