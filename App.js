@@ -31,7 +31,7 @@ export default class App extends React.Component {
           />
         </View>
         <View style={styles.content}>
-          {this.state.currentPage == "chat" ? <Chat /> : console.log("non")}
+          {this.state.currentPage == "chat" ? <Chat name="Remi"/> : console.log("non")}
           {this.state.currentPage == "video" ? <Video /> : console.log("non")}
           {this.state.currentPage == "file" ? <File /> : console.log("non")}
         </View>
