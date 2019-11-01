@@ -14,8 +14,6 @@ import java.util.ArrayList;
 import com.awesomeproject.BuildConfig;
 import com.awesomeproject.R;
 
-// react-native-svg
-import com.horcrux.svg.SvgPackage;
 // react-native-webrtc
 import com.oney.WebRTCModule.WebRTCModulePackage;
 
@@ -63,7 +61,6 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
-      new SvgPackage(),
       new WebRTCModulePackage()
     ));
   }

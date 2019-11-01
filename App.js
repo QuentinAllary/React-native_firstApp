@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, TextInput, Button, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import Chat from "./components/chat";
 import Menu from "./components/menu";
@@ -7,11 +7,11 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.leftCol}>
-          <Chat />
-        </View>
-        <View style={styles.rightCol}>
+        <View style={styles.menu}>
           <Menu />
+        </View>
+        <View style={styles.chat}>
+          <Chat />
         </View>
       </View>
     );
@@ -20,16 +20,15 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 48,
+    // marginTop: 48,
     flex: 1,
-    flexDirection: "row"
   },
-  leftCol: {
-    backgroundColor: "powderblue",
-    flex: 3
+  chat: {
+    // backgroundColor: "powderblue",
+    flex: 6
   },
-  rightCol: {
-    backgroundColor: "skyblue",
+  menu: {
+    // backgroundColor: "skyblue",
     flex: 1
   }
 });

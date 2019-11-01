@@ -10,7 +10,7 @@ export default class Chat extends React.Component {
       name: null,
       ws: null
     };
-    ws = new WebSocket("ws://192.168.1.10:8080");
+    ws = new WebSocket("ws://192.168.1.10:23456");
     ws.onopen = () => {
       console.log("connection opened");
     };
@@ -60,7 +60,6 @@ export default class Chat extends React.Component {
           </View>
           <View style={{ flex: 1 }}>
             <Button title="Send" onPress={() => this.postMessage()}></Button>
-            <Button title="Get" onPress={() => this.getMessage()}></Button>
           </View>
         </View>
       </>
