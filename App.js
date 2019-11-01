@@ -2,14 +2,14 @@ import React from "react";
 import { StyleSheet, View, Button } from "react-native";
 
 import Chat from "./components/chat";
-import Menu from "./components/menu";
-import Home from "./components/home";
+import Video from "./components/video";
+import File from "./components/file";
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPage: null,
+      currentPage: null
     };
   }
 
@@ -21,9 +21,19 @@ export default class App extends React.Component {
             title="Chat"
             onPress={() => this.setState({ currentPage: "chat" })}
           />
+          <Button
+            title="Video"
+            onPress={() => this.setState({ currentPage: "video" })}
+          />
+          <Button
+            title="File"
+            onPress={() => this.setState({ currentPage: "file" })}
+          />
         </View>
         <View style={styles.content}>
           {this.state.currentPage == "chat" ? <Chat /> : console.log("non")}
+          {this.state.currentPage == "video" ? <Video /> : console.log("non")}
+          {this.state.currentPage == "file" ? <File /> : console.log("non")}
         </View>
       </View>
     );
@@ -32,23 +42,16 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    // marginTop: 48,
     flex: 1,
-  },
-  chat: {
-    // backgroundColor: "powderblue",
-    flex: 6
+    // backgroundColor: "yellow",
   },
   menu: {
-    // backgroundColor: "skyblue",
-    flex: 1
+    flex: 1,
+    marginRight: 10,
+    marginLeft: 10,
+    // backgroundColor: "red"
   },
   content: {
     flex: 5
-  },
-  buttonContainer: {
-    flex: 1,
-    marginRight: 10,
-    marginLeft: 10
   }
 });
