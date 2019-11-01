@@ -7,8 +7,7 @@ export default class Chat extends React.Component {
     this.state = {
       message: null,
       chat: "",
-      name: null,
-      ws: null
+      name: null
     };
     ws = new WebSocket("ws://192.168.1.10:23456");
     ws.onopen = () => {
@@ -17,9 +16,9 @@ export default class Chat extends React.Component {
 
     ws.onmessage = e => {
       console.log("Received from server: ", e.data);
-      
-      let new_chat = this.state.chat + "\n" + e.data
-      this.setState({chat: new_chat});
+
+      let new_chat = this.state.chat + "\n" + this.props.name + ": " + e.data;
+      this.setState({ chat: new_chat });
     };
 
     ws.onerror = e => {
@@ -69,7 +68,7 @@ export default class Chat extends React.Component {
 
 const styles = StyleSheet.create({
   chatBox: {
-    flex: 4,
+    flex: 4
   },
   message: {
     borderColor: "black",
