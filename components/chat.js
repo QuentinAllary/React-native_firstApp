@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, TextInput, Button, View } from "react-native";
 import AwesomeButtonRick from "react-native-really-awesome-button/src/themes/rick";
 
-const localhost = "10.109.253.226"
+const localhost = "192.168.43.41"
 export default class Chat extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +19,7 @@ export default class Chat extends React.Component {
     ws.onmessage = e => {
       console.log("Received from server: ", e.data);
 
-      let new_chat = this.state.chat + "\n" + this.state.name + ": " + e.data;
+      let new_chat = this.state.chat + "\n" + e.data;
       this.setState({ chat: new_chat });
     };
 
@@ -36,7 +36,8 @@ export default class Chat extends React.Component {
 
   postMessage() {
     if (this.state.message != null && this.state.name != null) {
-      ws.send(this.state.message); // send a message
+      let msg = this.state.name + ": " + this.state.message;
+      ws.send(msg); // send a message
       this.setState({ message: null });
     }
   }
