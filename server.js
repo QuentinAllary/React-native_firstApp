@@ -1,15 +1,6 @@
 const WebSocket = require("ws");
 
-const wss = new WebSocket.Server({ port: 23456 });
-
-// This code generates unique userid for everyuser.
-const getUniqueID = () => {
-  const s4 = () =>
-    Math.floor((1 + Math.random()) * 0x10000)
-      .toString(16)
-      .substring(1);
-  return s4() + s4() + "-" + s4();
-};
+const wss = new WebSocket.Server({ port: 23456 }, console.log("Server starting on port 23456"));
 
 wss.on("connection", ws => {
   console.log("Connected");

@@ -61,15 +61,17 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: "yellow"
+    // backgroundColor: "#636c6e"
   },
   menu: {
     flex: 1,
-    flexDirection: "row",
+    flexDirection: "row"
     // backgroundColor: "red"
   },
   menuButton: {
     flex: 1,
+    paddingLeft: 40,
+    paddingTop: 10
     // backgroundColor: "blue"
   },
   content: {

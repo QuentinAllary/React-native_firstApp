@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, TextInput, Button, View } from "react-native";
 import AwesomeButtonRick from "react-native-really-awesome-button/src/themes/rick";
 
+const localhost = "10.109.253.226"
 export default class Chat extends React.Component {
   constructor(props) {
     super(props);
@@ -10,7 +11,7 @@ export default class Chat extends React.Component {
       chat: "",
       name: null
     };
-    ws = new WebSocket("ws://192.168.1.10:23456");
+    ws = new WebSocket("ws://"+localhost+":23456");
     ws.onopen = () => {
       console.log("connection opened");
     };
@@ -50,7 +51,6 @@ export default class Chat extends React.Component {
           </View>
 
           <View style={{ flex: 1 }}>
-            <Text style={styles.messageHeader}>Enter your message</Text>
             <View style={styles.messageBody}>
               <TextInput
                 placeholder="Your name"
@@ -80,10 +80,12 @@ export default class Chat extends React.Component {
 
 const styles = StyleSheet.create({
   chatBox: {
-    flex: 4
+    flex: 4,
+    paddingLeft: 5,
+    paddingRight: 5
   },
   messageBody: {
-    flexDirection: "row"
+    flexDirection: "row",
   },
   message: {
     borderColor: "black",
@@ -95,19 +97,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     flex: 1
   },
-  messageHeader: {
-    textAlign: "center"
-  },
   headerStyle: {
     fontSize: 36,
     textAlign: "center",
     fontWeight: "100",
-    marginBottom: 24
-  },
-  elementsContainer: {
-    backgroundColor: "#ecf5fd",
-    marginLeft: 24,
-    marginRight: 24,
     marginBottom: 24
   }
 });
