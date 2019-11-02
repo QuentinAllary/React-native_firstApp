@@ -14,7 +14,7 @@
     "nodejs": "0.0.0",
     "react": "16.9.0",
     "react-native": "0.61.2",
-    "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera.git",
+    "react-native-camera": "^3.8.0",
     "react-native-really-awesome-button": "^1.4.2",
     "react-native-webrtc": "^1.75.1",
     "react-native-websocket": "^1.0.2",
