@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, TextInput, Button, View } from "react-native";
+import AwesomeButtonRick from "react-native-really-awesome-button/src/themes/rick";
 
 export default class Chat extends React.Component {
   constructor(props) {
@@ -61,11 +62,15 @@ export default class Chat extends React.Component {
                 style={styles.message}
                 onChangeText={text => this.setState({ message: text })}
               >
+                {this.state.message}
               </TextInput>
+              <AwesomeButtonRick
+                type="secondary"
+                onPress={() => this.postMessage()}
+              >
+                Send
+              </AwesomeButtonRick>
             </View>
-          </View>
-          <View style={{ flex: 1 }}>
-            <Button title="Send" onPress={() => this.postMessage()}></Button>
           </View>
         </View>
       </>
