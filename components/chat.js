@@ -7,6 +7,7 @@ export default class Chat extends React.Component {
     this.state = {
       message: null,
       chat: "",
+      name: null
     };
     ws = new WebSocket("ws://192.168.1.10:23456");
     ws.onopen = () => {
@@ -15,9 +16,9 @@ export default class Chat extends React.Component {
 
     ws.onmessage = e => {
       console.log("Received from server: ", e.data);
-      
-      let new_chat = this.state.chat + "\n" + this.props.name + ": " +e.data;
-      this.setState({chat: new_chat});
+
+      let new_chat = this.state.chat + "\n" + this.state.name + ": " + e.data;
+      this.setState({ chat: new_chat });
     };
 
     ws.onerror = e => {
@@ -32,7 +33,7 @@ export default class Chat extends React.Component {
   }
 
   postMessage() {
-    if (this.state.message != null) {
+    if (this.state.message != null && this.state.name != null) {
       ws.send(this.state.message); // send a message
       this.setState({ message: null });
     }
@@ -49,12 +50,19 @@ export default class Chat extends React.Component {
 
           <View style={{ flex: 1 }}>
             <Text style={styles.messageHeader}>Enter your message</Text>
-            <TextInput
-              style={styles.message}
-              onChangeText={text => this.setState({ message: text })}
-            >
-              {this.state.message}
-            </TextInput>
+            <View style={styles.messageBody}>
+              <TextInput
+                placeholder="Your name"
+                style={styles.name}
+                onChangeText={text => this.setState({ name: text })}
+              ></TextInput>
+              <TextInput
+                placeholder="Your message"
+                style={styles.message}
+                onChangeText={text => this.setState({ message: text })}
+              >
+              </TextInput>
+            </View>
           </View>
           <View style={{ flex: 1 }}>
             <Button title="Send" onPress={() => this.postMessage()}></Button>
@@ -67,11 +75,20 @@ export default class Chat extends React.Component {
 
 const styles = StyleSheet.create({
   chatBox: {
-    flex: 4,
+    flex: 4
+  },
+  messageBody: {
+    flexDirection: "row"
   },
   message: {
     borderColor: "black",
-    borderWidth: 1
+    borderWidth: 1,
+    flex: 4
+  },
+  name: {
+    borderColor: "green",
+    borderWidth: 1,
+    flex: 1
   },
   messageHeader: {
     textAlign: "center"

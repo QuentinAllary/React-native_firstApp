@@ -1,12 +1,17 @@
 import React from "react";
-import { StyleSheet, View, Button, Text } from "react-native";
+import { StyleSheet, View, Button, Text, TextInput } from "react-native";
 
-export default class Video extends React.Component {
+export default class Profil extends React.Component {
   render() {
     return (
       <>
         <View style={styles.container}>
-          <Text style={styles.headerStyle}>Video</Text>
+          <Text style={styles.headerStyle}>Profil</Text>
+
+          <TextInput
+            style={styles.message}
+            onChangeText={text => super.setState({ name: text })}
+          ></TextInput>
         </View>
       </>
     );
@@ -15,7 +20,7 @@ export default class Video extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
     // flexDirection: "row",
     // justifyContent: "flex-start",
     // backgroundColor: "green"
